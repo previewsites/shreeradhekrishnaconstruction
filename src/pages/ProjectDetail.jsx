@@ -151,7 +151,7 @@ const ProjectDetail = () => {
             viewport={{ once: true }}
           >
             <h2 className="section-title"><LayoutDashboard className="text-gold" /> Layout Plans</h2>
-            <div className="layouts-stack flex flex-col gap-12">
+            <div className="layouts-grid">
               {project.layoutPlans.map((img, i) => (
                 <div key={i} className="layout-item shadow-2xl">
                   <div className="blueprint-header flex justify-between items-center mb-4 pb-4 border-b border-[#2a364d]">
