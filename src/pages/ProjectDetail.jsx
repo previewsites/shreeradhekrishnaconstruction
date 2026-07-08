@@ -66,30 +66,42 @@ const ProjectDetail = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+            className="project-about-grid"
           >
-            <div>
+            <div className="project-vision-col">
               <h2 className="section-title"><Info className="text-gold" /> The Vision</h2>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              <p className="vision-text text-lg text-gray-300 leading-relaxed mb-8">
                 {project.about}
               </p>
               <div className="features-grid">
                 {project.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-gray-400 p-3 bg-[#0a1324] rounded-lg border border-[#1a2333]">
+                  <div key={i} className="feature-pill flex items-center gap-3 text-sm text-gray-400 p-4 bg-[#0a1324] rounded-xl border border-[#1a2333]">
                     <ChevronRight size={16} className="text-gold" />
                     <span>{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="glass-panel p-8 rounded-2xl">
-              <h3 className="text-2xl text-gold mb-6 font-heading">Quick Inquiry</h3>
-              <form className="flex flex-col gap-4">
-                <input type="text" placeholder="Your Name" className="w-full bg-[#050b14] border border-[#1a2333] p-4 rounded-xl text-white" />
-                <input type="email" placeholder="Your Email" className="w-full bg-[#050b14] border border-[#1a2333] p-4 rounded-xl text-white" />
-                <input type="tel" placeholder="Phone Number" className="w-full bg-[#050b14] border border-[#1a2333] p-4 rounded-xl text-white" />
-                <button type="button" className="btn-primary w-full mt-2 py-4">Request Callback</button>
-              </form>
+            
+            <div className="project-inquiry-col">
+              <div className="glass-panel inquiry-form-card">
+                <h3 className="inquiry-title text-2xl font-heading text-gold mb-2">Quick Inquiry</h3>
+                <p className="inquiry-subtitle text-sm text-gray-400 mb-6">Connect with our luxury sales consultants directly.</p>
+                <form className="inquiry-form flex flex-col gap-4">
+                  <div className="form-input-group">
+                    <input type="text" placeholder="Your Name" required />
+                  </div>
+                  <div className="form-input-group">
+                    <input type="email" placeholder="Your Email Address" required />
+                  </div>
+                  <div className="form-input-group">
+                    <input type="tel" placeholder="Phone Number" required />
+                  </div>
+                  <button type="button" className="btn-primary inquiry-btn w-full mt-2 py-4">
+                    <span>Request Callback</span>
+                  </button>
+                </form>
+              </div>
             </div>
           </motion.div>
         </section>
