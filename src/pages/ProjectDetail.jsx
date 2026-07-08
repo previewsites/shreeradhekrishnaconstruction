@@ -151,10 +151,23 @@ const ProjectDetail = () => {
             viewport={{ once: true }}
           >
             <h2 className="section-title"><LayoutDashboard className="text-gold" /> Layout Plans</h2>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="layouts-stack flex flex-col gap-12">
               {project.layoutPlans.map((img, i) => (
                 <div key={i} className="layout-item shadow-2xl">
-                  <img src={img} alt={`${project.title} layout ${i + 1}`} />
+                  <div className="blueprint-header flex justify-between items-center mb-4 pb-4 border-b border-[#2a364d]">
+                    <div className="blueprint-title flex flex-col">
+                      <span className="text-gold font-mono text-xs uppercase tracking-widest">Architectural Scheme</span>
+                      <span className="text-white font-heading text-lg font-bold">Floor Plan {i + 1}</span>
+                    </div>
+                    <div className="blueprint-meta text-right font-mono text-xs text-gray-500">
+                      <span>SCALE: 1:100</span>
+                      <span className="mx-2">•</span>
+                      <span>PLAN NO: 0{i + 1}</span>
+                    </div>
+                  </div>
+                  <div className="blueprint-image-wrapper">
+                    <img src={img} alt={`${project.title} layout ${i + 1}`} className="blueprint-img" />
+                  </div>
                 </div>
               ))}
             </div>
