@@ -38,9 +38,7 @@ const Footer = () => {
         >
           {/* Brand block */}
           <motion.div className="footer-brand" variants={itemVariants}>
-            <h2 className="footer-logo font-heading">
-              HRG<span className="text-gold">.</span>
-            </h2>
+            <img src="/assets/home/logo.png" alt="HRG Construction Logo" className="footer-logo-img" />
             <p className="brand-text">
               Pioneering high-end commercial and residential real estate since 2015. Benchmarking excellence, one landmark at a time.
             </p>

@@ -41,7 +41,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          <h2>HRG<span className="dot">.</span></h2>
+          <img src="/assets/home/logo.png" alt="HRG Construction Logo" className="logo-img" />
         </Link>
         
         {/* Desktop Nav */}

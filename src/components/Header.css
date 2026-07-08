@@ -26,17 +26,16 @@
   z-index: 2001;
 }
 
-.logo h2 {
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  margin: 0;
-  color: var(--text-light);
-  font-family: var(--font-heading);
-  transition: color 0.3s ease;
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.logo .dot {
-  color: var(--primary-color);
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 /* Desktop Nav Styles - Premium Hover Effects */
