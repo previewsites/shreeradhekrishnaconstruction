@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Ultra Premium Palette */
+  --primary-color: #d4af37; /* Royal Gold */
+  --primary-hover: #f1c40f;
+  --primary-gradient: linear-gradient(135deg, #d4af37 0%, #aa8623 100%);
+  
+  --bg-color: #050b14; /* Deep, rich space black/blue */
+  --bg-color-light: #0a1324;
+  --bg-card: rgba(10, 19, 36, 0.7);
+  
+  --text-light: #ffffff;
+  --text-muted: #a0aec0;
+  
+  --border-color: rgba(212, 175, 55, 0.15);
+  --border-glow: 0 0 20px rgba(212, 175, 55, 0.1);
+  
+  --glass-bg: rgba(10, 19, 36, 0.6);
+  --glass-blur: blur(16px);
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif; /* Sophisticated serif for headings */
+  --font-sans: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  /* Thematic Construction Background Effect */
+  background-image: 
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #0a1324 0%, #050b14 100%);
+  background-size: 50px 50px, 50px 50px, 100% 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--text-light);
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Enforce Aspect Ratios and Object Fit Globally */
+img, .bg-cover {
+  object-fit: cover !important;
+}
+
+/* Premium Glass Panel */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glass-panel:hover::before {
+  opacity: 1;
+}
+
+.glass-panel:hover, .glass-panel:active {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), var(--border-glow);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Stunning Buttons */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #000;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover, .btn-secondary:active {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.2);
+  color: #fff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1400px; /* Increased for wider, elegant layouts */
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Golden Text Accent */
+.text-gold {
+  color: var(--primary-color);
+}
+
+/* Section Spacing */
+section {
+  padding: 8rem 0;
+}
+
+/* Animated gradient text for main headings */
+.gradient-text {
+  background: linear-gradient(to right, #ffffff, #d4af37, #ffffff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE OVERRIDES (UI 10/10)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Scale down section paddings aggressively for smaller screens */
+  section {
+    padding: 2.5rem 0 !important;
+  }
+  
+  .py-24 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .py-16 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  /* Use specific typography classes rather than generic tags */
+  .font-heading {
+    line-height: 1.2;
+  }
+  
+  /* Drastically reduce text sizes */
+  .text-4xl { font-size: 1.75rem !important; }
+  .text-3xl { font-size: 1.5rem !important; }
+  .text-2xl { font-size: 1.25rem !important; }
+  .text-xl { font-size: 1rem !important; }
+  .text-lg { font-size: 0.95rem !important; }
+  
+  /* Glass panels need slightly less padding on mobile */
+  .glass-panel {
+    padding: 1.25rem !important;
+  }
+
+  /* Force background grid size for mobile */
+  body {
+    background-size: 30px 30px, 30px 30px, 100% 100%;
+  }
+  
+  /* Make all background images (heroes) fit better */
+  .page-header-bg {
+    background-position: top center !important;
+  }
+  
+  /* Give buttons full width on small screens */
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
