@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('/assets/extracted_index_152.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('assets/extracted_index_152.jpg')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div

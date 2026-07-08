@@ -22,10 +22,10 @@ const milestones = [
 ];
 
 const team = [
-  { name: "Mr. Chandrasen Gajria", role: "Partner", img: "/assets/about/view/image-28.jpg" },
-  { name: "Mr. Nirmal Bhatia", role: "Partner", img: "/assets/about/view/image-29.jpg" },
-  { name: "Mr. Karan Bhatia", role: "Director, Sales & Marketing", img: "/assets/about/view/image-26.jpg" },
-  { name: "Mr. Chirag Bhatia", role: "Director, Operations", img: "/assets/about/view/image-27.jpg" }
+  { name: "Mr. Chandrasen Gajria", role: "Partner", img: "assets/about/view/image-28.jpg" },
+  { name: "Mr. Nirmal Bhatia", role: "Partner", img: "assets/about/view/image-29.jpg" },
+  { name: "Mr. Karan Bhatia", role: "Director, Sales & Marketing", img: "assets/about/view/image-26.jpg" },
+  { name: "Mr. Chirag Bhatia", role: "Director, Operations", img: "assets/about/view/image-27.jpg" }
 ];
 
 const About = () => {
@@ -33,7 +33,7 @@ const About = () => {
     <div className="about-page">
       {/* Page Header */}
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('/assets/cross-roads/view/banner-2.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-2.jpg')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div
@@ -84,7 +84,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-               <div className="about-image" style={{backgroundImage: "url('/assets/about/view/image-30.png')"}}></div>
+               <div className="about-image" style={{backgroundImage: "url('assets/about/view/image-30.png')"}}></div>
             </motion.div>
           </div>
         </div>

@@ -8,7 +8,7 @@ const Contact = () => {
     <div className="contact-page">
       {/* Page Header */}
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('/assets/cross-roads/view/banner-3.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-3.jpg')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div
@@ -129,7 +129,7 @@ const Contact = () => {
           <h3 className="text-2xl font-heading text-white">Interactive Map Location</h3>
           <p className="text-gray-400">Ahmedabad, Gujarat</p>
         </div>
-        <div className="w-full h-full bg-[url('/assets/cross-roads/view/view-6.jpg')] bg-cover bg-center grayscale opacity-30"></div>
+        <div className="w-full h-full bg-[url('assets/cross-roads/view/view-6.jpg')] bg-cover bg-center grayscale opacity-30"></div>
       </section>
     </div>
   );

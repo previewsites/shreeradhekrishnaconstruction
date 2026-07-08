@@ -8,28 +8,28 @@ const projects = [
   {
     title: 'THE JEWEL PARK®',
     description: 'Exclusive Retail & Office Spaces For Jewellers at CG Road - Ahmedabad.',
-    imgSrc: '/assets/jewel-park/view/banner-1.jpg',
+    imgSrc: 'assets/jewel-park/view/banner-1.jpg',
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA08835/280721',
     link: '/projects'
   },
   {
     title: 'MERCÁDO®',
     description: 'High End Retail Spaces & Offices at CG Road - Ahmedabad.',
-    imgSrc: '/assets/mercado/view/banner-1.jpg',
+    imgSrc: 'assets/mercado/view/banner-1.jpg',
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA08205/170321',
     link: '/projects'
   },
   {
     title: 'VERÁNTES®',
     description: '4 BHK Terrace Apartments at Thaltej - Ahmedabad.',
-    imgSrc: '/assets/verantes/view/banner-14.jpg',
+    imgSrc: 'assets/verantes/view/banner-14.jpg',
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA00767/201117',
     link: '/projects'
   },
   {
     title: 'Cross Roads',
     description: 'Modern Retail & Corporate Spaces at Vijay Cross Road - Ahmedabad.',
-    imgSrc: '/assets/cross-roads/view/banner-1.jpg',
+    imgSrc: 'assets/cross-roads/view/banner-1.jpg',
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA12649/161123',
     link: '/projects'
   }
@@ -49,7 +49,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-overlay"></div>
-        <div className="hero-bg" style={{backgroundImage: "url('/assets/cross-roads/view/banner-1.jpg')"}}></div>
+        <div className="hero-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-1.jpg')"}}></div>
         <div className="container hero-content">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -126,7 +126,7 @@ const Home = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <div className="intro-image" style={{backgroundImage: "url('/assets/cross-roads/view/view-6.jpg')"}}></div>
+              <div className="intro-image" style={{backgroundImage: "url('assets/cross-roads/view/view-6.jpg')"}}></div>
               <div className="glass-panel overlay-card">
                 <Building2 size={32} className="text-gold mb-3" />
                 <h4>We Love Ahmedabad</h4>

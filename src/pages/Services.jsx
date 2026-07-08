@@ -8,31 +8,31 @@ const servicesList = [
     title: "Developer Assisted Interior Design",
     icon: <Paintbrush size={40} />,
     description: "HRG Construction Co. has an in-house team of designers and engineers to help you plan and execute the property of your dreams in a timely and cost-efficient manner.",
-    imgSrc: "/assets/services/view/image-19.jpg"
+    imgSrc: "assets/services/view/image-19.jpg"
   },
   {
     title: "Developer Assisted Property Maintenance",
     icon: <Wrench size={40} />,
     description: "We believe in regular maintenance of our properties to ensure they look as good as new with every passing year. We assist clients with housekeeping, civil work, electrical, plumbing etc.",
-    imgSrc: "/assets/services/view/image-20.jpg"
+    imgSrc: "assets/services/view/image-20.jpg"
   },
   {
     title: "Leasing and Resale Assistance",
     icon: <Building size={40} />,
     description: "HRG Construction Co. believes in creating value for customers by assisting with leasing or resale of their properties with the best possible returns through our extensive channel partner network.",
-    imgSrc: "/assets/cross-roads/view/view-19.jpg"
+    imgSrc: "assets/cross-roads/view/view-19.jpg"
   },
   {
     title: "Property Purchase & Management for NRI's",
     icon: <Globe size={40} />,
     description: "There is nothing in the world that feels as good as coming home. We specialize in assisting NRI's with all their property requirements from purchase, legal assistance to post-purchase management.",
-    imgSrc: "/assets/mercado/view/view-19.jpg"
+    imgSrc: "assets/mercado/view/view-19.jpg"
   },
   {
     title: "Home/Commercial Loans & Insurance",
     icon: <Landmark size={40} />,
     description: "We offer assistance for Home and Commercial Loans through various leading banks and help in purchasing Property Insurance to secure your property's future.",
-    imgSrc: "/assets/jewel-park/view/image-32.jpg"
+    imgSrc: "assets/jewel-park/view/image-32.jpg"
   }
 ];
 
@@ -41,7 +41,7 @@ const Services = () => {
     <div className="services-page">
       {/* Page Header */}
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('/assets/cross-roads/view/banner-3.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-3.jpg')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div
