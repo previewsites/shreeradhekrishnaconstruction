@@ -1,9 +1,9 @@
 {
-  "name": "hrg-web",
+  "name": "shree-radhe-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Ayar-Suresh.github.io/hrgconstruction",
+  "homepage": "https://Ayar-Suresh.github.io/shreeradhecolourwork",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

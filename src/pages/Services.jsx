@@ -1,38 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Paintbrush, Wrench, Building, Globe, Landmark } from 'lucide-react';
+import { Paintbrush, Wrench, Building, Landmark, Hammer, Shield } from 'lucide-react';
 import './Services.css';
 
 const servicesList = [
   {
-    title: "Developer Assisted Interior Design",
+    title: "Premium Colour Work & Painting",
     icon: <Paintbrush size={40} />,
-    description: "HRG Construction Co. has an in-house team of designers and engineers to help you plan and execute the property of your dreams in a timely and cost-efficient manner.",
-    imgSrc: "assets/services/view/image-19.jpg"
+    description: "Double-coat putty application, texture wall coatings, weatherproofing primer, and premium exterior/interior paint application using leading brands like Asian Paints Royale & Apex. We handle complete restoration and dampness treatments before painting.",
+    imgSrc: "https://lh3.googleusercontent.com/fQFODongn6xOEfkTj1T-Q1d3WhaAF4blBGaZGl1AAtWUyLA1aqchyxHm29384ezdPEdJ8_Zn53XfOVGEYQ=s0"
   },
   {
-    title: "Developer Assisted Property Maintenance",
-    icon: <Wrench size={40} />,
-    description: "We believe in regular maintenance of our properties to ensure they look as good as new with every passing year. We assist clients with housekeeping, civil work, electrical, plumbing etc.",
-    imgSrc: "assets/services/view/image-20.jpg"
-  },
-  {
-    title: "Leasing and Resale Assistance",
+    title: "Civil Construction & Remodeling",
     icon: <Building size={40} />,
-    description: "HRG Construction Co. believes in creating value for customers by assisting with leasing or resale of their properties with the best possible returns through our extensive channel partner network.",
-    imgSrc: "assets/cross-roads/view/view-19.jpg"
+    description: "Expert brick masonry, concrete plastering, ceiling repairs, layout modifications, and high-quality floor/wall tiling for kitchens, bathrooms, commercial shops, and office spaces.",
+    imgSrc: "https://lh3.googleusercontent.com/qzFAY6umb5a92LpFSdFmCeqp3VxqsBLjlc0MX1txZ1xAMMvAH24kgTiy7odWbY7n8Eyh3MYpuD6_ic6wDQ=s0"
   },
   {
-    title: "Property Purchase & Management for NRI's",
-    icon: <Globe size={40} />,
-    description: "There is nothing in the world that feels as good as coming home. We specialize in assisting NRI's with all their property requirements from purchase, legal assistance to post-purchase management.",
-    imgSrc: "assets/mercado/view/view-19.jpg"
-  },
-  {
-    title: "Home/Commercial Loans & Insurance",
+    title: "POP False Ceilings & Finishes",
     icon: <Landmark size={40} />,
-    description: "We offer assistance for Home and Commercial Loans through various leading banks and help in purchasing Property Insurance to secure your property's future.",
-    imgSrc: "assets/jewel-park/view/image-32.jpg"
+    description: "Custom Plaster of Paris (POP) false ceiling designs, gypsum board ceilings, wall repair patches, ceiling border moldings, and smooth texture finishes for residential and commercial interiors.",
+    imgSrc: "https://lh3.googleusercontent.com/TeaDMJY5zAVotmy0D-2QbB11yCweq2ulik4GCLlupohkpgaIrDxW4Qqcs7DSixcaeTHVNB3MW6O40J2cOA=s0"
+  },
+  {
+    title: "Custom Carpentry & Furniture",
+    icon: <Hammer size={40} />,
+    description: "On-site custom woodwork, laminate wardrobes, modular kitchen cabinets, high-gloss veneer polishing, wall paneling, main door installations, and general residential carpentry using top-grade plywood.",
+    imgSrc: "https://lh3.googleusercontent.com/kLXoOjR-rpRds97P9ZPREEjAVEv6fMkzNySIbEwokE48T21qmdWlwLDQoh_nk3WKxJxl3mQSjHc2Cgf62g=s0"
+  },
+  {
+    title: "Demolition & Allied Contractor Services",
+    icon: <Wrench size={40} />,
+    description: "Safe structural demolition, bathroom remodeling preparation, CPVC pipeline upgrades, concealed wiring installations, wall leakage sealing, and structural dampness waterproofing.",
+    imgSrc: "https://lh3.googleusercontent.com/TJc6COs50M1M4m042X7EKbc9NtzI7v0MV3nxGbzZaXHQfN74jPWqkppeH8gokT2StDUwR51dtNMSg9U-kA=s0"
   }
 ];
 
@@ -41,7 +41,7 @@ const Services = () => {
     <div className="services-page">
       {/* Page Header */}
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-3.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('https://lh3.googleusercontent.com/4GZ66hLP31sDEePFKpEntf1ItWY0aFPieph9HnhkZtoD5PDEdp7Do9O6wPObKd1ZS11q5e-UBaTiIxXurA=s0')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div
@@ -49,10 +49,10 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-4">Beyond Construction</h5>
+            <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-4">Complete Contracting Solutions</h5>
             <h1 className="gradient-text font-heading">Our Services</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mt-4">
-              Committed to our customers at all stages - right from inquiry to post-possession property handover.
+              Providing top-tier painting, civil, POP, demolition, and carpentry contractor services across Ahmedabad.
             </p>
           </motion.div>
         </div>
@@ -68,7 +68,7 @@ const Services = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-heading text-gold italic">
-              "The projects we design are thoughtfully designed, impeccably built, strategically located and crafted for the contemporary dwellers of the present time."
+              "No compromise in the quality of the work. We serve our customers on priority, ensuring robust construction, beautiful colors, and fine carpentry."
             </h2>
           </motion.div>
         </div>

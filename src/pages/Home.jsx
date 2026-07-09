@@ -1,46 +1,66 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Building2, MapPin, Quote } from 'lucide-react';
+import { ArrowRight, Star, Building2, MapPin, Quote, Paintbrush, Hammer, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
 const projects = [
   {
-    title: 'THE JEWEL PARK®',
-    description: 'Exclusive Retail & Office Spaces For Jewellers at CG Road - Ahmedabad.',
-    imgSrc: 'assets/jewel-park/view/banner-1.jpg',
-    rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA08835/280721',
-    link: '/projects'
+    title: 'Office Interior Remodeling & Civil Works',
+    description: 'Complete office layout redesign, civil demolition, tiling, and structural upgrades in Naranpura.',
+    imgSrc: 'https://lh3.googleusercontent.com/1Rk8_9TUvUs5qFV8tBZ7ztA6ggXikJT41adg2a6vgLUH0ubAqcE2o3x80kLA37N-X90bejKc3SNYs5SfFQ=s0',
+    location: 'Naranpura, Ahmedabad',
+    link: '/projects/office-renovation'
   },
   {
-    title: 'MERCÁDO®',
-    description: 'High End Retail Spaces & Offices at CG Road - Ahmedabad.',
-    imgSrc: 'assets/mercado/view/banner-1.jpg',
-    rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA08205/170321',
-    link: '/projects'
+    title: 'Flat Custom Furniture & Carpentry',
+    description: 'Elegant custom furniture, modular kitchen panels, and laminate carpentry work in Bopal.',
+    imgSrc: 'https://lh3.googleusercontent.com/kLXoOjR-rpRds97P9ZPREEjAVEv6fMkzNySIbEwokE48T21qmdWlwLDQoh_nk3WKxJxl3mQSjHc2Cgf62g=s0',
+    location: 'Bopal, Ahmedabad',
+    link: '/projects/flat-furniture'
   },
   {
-    title: 'VERÁNTES®',
-    description: '4 BHK Terrace Apartments at Thaltej - Ahmedabad.',
-    imgSrc: 'assets/verantes/view/banner-14.jpg',
-    rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA00767/201117',
-    link: '/projects'
+    title: 'POP Ceilings, Putty & Premium Painting',
+    description: 'Decorative POP ceiling designs, smooth putty leveling, and premium emulsion paint application.',
+    imgSrc: 'https://lh3.googleusercontent.com/fQFODongn6xOEfkTj1T-Q1d3WhaAF4blBGaZGl1AAtWUyLA1aqchyxHm29384ezdPEdJ8_Zn53XfOVGEYQ=s0',
+    location: 'Ahmedabad',
+    link: '/projects/wall-painting'
   },
   {
-    title: 'Cross Roads',
-    description: 'Modern Retail & Corporate Spaces at Vijay Cross Road - Ahmedabad.',
-    imgSrc: 'assets/cross-roads/view/banner-1.jpg',
-    rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA12649/161123',
-    link: '/projects'
+    title: 'Luxury Bathroom Renovation & Plumbing',
+    description: 'Full bathroom waterproofing, digital tile cladding, plumbing layouts, and sanitary fittings.',
+    imgSrc: 'https://lh3.googleusercontent.com/TJc6COs50M1M4m042X7EKbc9NtzI7v0MV3nxGbzZaXHQfN74jPWqkppeH8gokT2StDUwR51dtNMSg9U-kA=s0',
+    location: 'Ahmedabad',
+    link: '/projects/bathroom-remodeling'
   }
 ];
 
 const testimonials = [
-  { name: "Anuj Panchal", role: "Director", text: "HRG Construction Co. is one of the most Unique Developers of Ahmedabad with exceptional architecture, great planning and delivering as per the commitments. Their professionalism shows in management, quality of work and customer service." },
-  { name: "Rakesh Shah", role: "Client", text: "The best real estate company. Young energetic developer, Very professional, experienced and helpful to the client. Coming up with the best project on prime location of Ahmedabad. Highly recommended." },
-  { name: "Dharmik Trivedi", role: "Client", text: "Very Supportive & Provide Value For Money Projects on Prime Locations .. It’s a Pleasure Working With HRG. A Big Thumbs Up." },
-  { name: "Pujaa Pandya", role: "Client", text: "Extraordinary attention to detail takes your projects to another level. The city must be delighted to witness such Infrastructure!" },
-  { name: "Nirav Shah", role: "Client", text: "HRG Team is very Cooperative and flexible. Superb quality of Construction with Innovative structure and delivering Quality Construction which they promise. 100% trustworthy." }
+  { 
+    name: "Anuj Panchal", 
+    role: "On behalf of 'The Tea Factory'", 
+    text: "The best thing about Shree Radhe is they serve their customers on priority. No compromise in the quality of the work. I would like to thank the entire team of Shree Radhe to work so diligently and completing our commercial paint and civil work on time!" 
+  },
+  { 
+    name: "Rakesh Shah", 
+    role: "Homeowner", 
+    text: "Shree Radhe Colour & Civil Contractor is hands down the best contractor in Ahmedabad! We've worked with them on multiple projects, and each time, they have delivered outstanding results. Satish Rathod is the best person for civil and color work." 
+  },
+  { 
+    name: "Nirav Shah", 
+    role: "Flat Owner", 
+    text: "Shree Radhe completed our flat interior furniture work and civil tiling in Bopal, and we are very happy with the results. Their team managed the carpentry and tiling neatly with great attention to detail. Clean and professional finish." 
+  },
+  { 
+    name: "Pujaa Pandya", 
+    role: "Commercial Client", 
+    text: "Ahmedabad's best civil & colour contractor. Perfect and on-time work. If you are planning for remodeling, painting, or any kind of interior furniture work to be done, then I highly recommend Mr. Satish Rathod. They are the best in the industry." 
+  },
+  { 
+    name: "Dharmik Trivedi", 
+    role: "Homeowner", 
+    text: "We had our stairs wall damaged due to water leakage. Mr. Satish bhai got the waterproofing, POP work, putty, and paint work done seamlessly. Very reliable, well-coordinated, and excellent value for money." 
+  }
 ];
 
 const Home = () => {
@@ -49,21 +69,21 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-overlay"></div>
-        <div className="hero-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-1.jpg')"}}></div>
+        <div className="hero-bg" style={{backgroundImage: "url('https://lh3.googleusercontent.com/1Rk8_9TUvUs5qFV8tBZ7ztA6ggXikJT41adg2a6vgLUH0ubAqcE2o3x80kLA37N-X90bejKc3SNYs5SfFQ=s0')"}}></div>
         <div className="container hero-content">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <h5 className="text-gold tracking-widest mb-4 uppercase text-sm font-bold">Welcome to HRG Construction Co.</h5>
-            <h1 className="gradient-text">Crafting Spaces Tailored To Your Needs</h1>
-            <p className="hero-subtitle">High End Lifestyles Inspired By Dynamic Global Trends.</p>
+            <h5 className="text-gold tracking-widest mb-4 uppercase text-sm font-bold">Premium Colour Work & Civil Contractor</h5>
+            <h1 className="gradient-text">Transforming Spaces with Expert Craftsmanship</h1>
+            <p className="hero-subtitle">Top-rated Painting, Civil Renovations, and Custom Interior Woodwork in Ahmedabad.</p>
             <div className="hero-actions">
               <Link to="/projects" className="btn-primary">
                 Explore Projects <ArrowRight size={18} className="ml-2" />
               </Link>
-              <Link to="/contact" className="btn-secondary">Get In Touch</Link>
+              <Link to="/contact" className="btn-secondary">Get Free Quote</Link>
             </div>
           </motion.div>
         </div>
@@ -93,30 +113,30 @@ const Home = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="section-title">We don't just build buildings, <span className="text-gold">we craft perfection.</span></h2>
+              <h2 className="section-title">We don't just renovate, <span className="text-gold">we craft perfection.</span></h2>
               <p className="lead-text">
-                HRG Construction Co., a pioneering real-estate development company based in Ahmedabad, 
-                has been benchmarking the industry since its inception in 2015.
+                Shree Radhe Colour Work & Construction Contractor, a pioneering contracting and interior firm based in Ahmedabad, 
+                has been benchmarking quality and trust under the leadership of Mr. Satish Rathod.
               </p>
               <p>
-                We strive to bring to you exclusive high end properties that have been carefully crafted to your perfection. We believe that perfection is only a milestone and we choose to go beyond that. These spaces are inspired from design trends across the globe yet stay rooted to our values.
+                We specialize in diverse contracting projects—from structural civil and brick construction to premium interior/exterior colour work, plastering, custom carpentry, and bathroom remodeling. Serving clients throughout Ahmedabad, we are acclaimed for our transparent processes, material integrity, and timely project delivery.
               </p>
               <div className="stats-container mt-8">
                 <div className="stat-item">
-                  <h3>2015</h3>
-                  <p>Established</p>
+                  <h3>68+</h3>
+                  <p>5-Star Reviews</p>
                 </div>
                 <div className="stat-item">
                   <h3>Premium</h3>
-                  <p>Commercial & Residential</p>
+                  <p>Finishes & Materials</p>
                 </div>
                 <div className="stat-item">
-                  <h3>10+</h3>
-                  <p>Industry Awards</p>
+                  <h3>15+</h3>
+                  <p>Years of Experience</p>
                 </div>
               </div>
               <Link to="/about" className="btn-secondary mt-8">
-                Discover Our Legacy
+                Our Story & Ethos
               </Link>
             </motion.div>
             <motion.div 
@@ -126,13 +146,43 @@ const Home = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <div className="intro-image" style={{backgroundImage: "url('assets/cross-roads/view/view-6.jpg')"}}></div>
+              <div className="intro-image" style={{backgroundImage: "url('https://lh3.googleusercontent.com/qzFAY6umb5a92LpFSdFmCeqp3VxqsBLjlc0MX1txZ1xAMMvAH24kgTiy7odWbY7n8Eyh3MYpuD6_ic6wDQ=s0')"}}></div>
               <div className="glass-panel overlay-card">
                 <Building2 size={32} className="text-gold mb-3" />
-                <h4>We Love Ahmedabad</h4>
-                <p>A living heritage city booming into India's most powerful industrial hub.</p>
+                <h4>Serving Ahmedabad</h4>
+                <p>Delivering high-quality custom paint, civil repairs, and home remodeling across Ahmedabad.</p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services At A Glance */}
+      <section className="ethos-section glass-panel" style={{margin: "0 5%", padding: "5rem 2rem", borderRadius: "30px"}}>
+        <div className="container">
+          <div className="text-center mb-12">
+            <h5 className="text-gold tracking-widest uppercase text-sm font-bold mb-2">Our Expertise</h5>
+            <h2 className="text-4xl font-heading">Contracting Services We Offer</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center p-6">
+              <Paintbrush size={48} className="text-gold mb-4" />
+              <h4 className="text-xl font-heading mb-2">Premium Colour Work</h4>
+              <p className="text-muted text-sm">Acrylic wall putty, textured coatings, exterior weatherproofing, and interior royal emulsion application.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6">
+              <Hammer size={48} className="text-gold mb-4" />
+              <h4 className="text-xl font-heading mb-2">Civil Works & Tiling</h4>
+              <p className="text-muted text-sm">Brickwork, concrete plastering, chemical waterproofing, office partition remodeling, and premium tile cladding.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6">
+              <Ruler size={48} className="text-gold mb-4" />
+              <h4 className="text-xl font-heading mb-2">POP & Custom Furniture</h4>
+              <p className="text-muted text-sm">Decorative false ceiling designs, custom cabinetry, modular kitchen layouts, and expert carpentry solutions.</p>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/services" className="btn-secondary">Explore All Services</Link>
           </div>
         </div>
       </section>
@@ -147,9 +197,9 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h5 className="text-gold tracking-widest uppercase text-sm font-bold mb-2">Our Portfolio</h5>
-            <h2 className="text-4xl mb-4 font-heading">Iconic Developments</h2>
-            <p className="text-muted max-w-2xl mx-auto">Discover our latest premium commercial and residential developments across prime locations in Ahmedabad.</p>
+            <h5 className="text-gold tracking-widest uppercase text-sm font-bold mb-2">Recent Projects</h5>
+            <h2 className="text-4xl mb-4 font-heading">Our Featured Works</h2>
+            <p className="text-muted max-w-2xl mx-auto">Explore some of our completed commercial and residential contracting renovations across Ahmedabad.</p>
           </motion.div>
 
           <div className="projects-showcase">
@@ -165,17 +215,17 @@ const Home = () => {
                 <div className="project-img-container">
                   <div className="project-img" style={{ backgroundImage: `url(${project.imgSrc})` }}></div>
                   <div className="project-overlay">
-                    <Link to={project.link} className="view-btn">View Project</Link>
+                    <Link to={project.link} className="view-btn">View Details</Link>
                   </div>
                 </div>
                 <div className="project-details glass-panel">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-2xl font-heading font-bold text-gold">{project.title}</h3>
+                    <h3 className="text-xl font-heading font-bold text-gold">{project.title}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                   <div className="rera-info flex items-center gap-2 text-xs text-gray-500">
                     <MapPin size={14} />
-                    <span>RERA: {project.rera}</span>
+                    <span>Location: {project.location}</span>
                   </div>
                 </div>
               </motion.div>

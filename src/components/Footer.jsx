@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowRight, ShieldCheck, ExternalLink } from 'lucide-react';
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp, FaInfoCircle } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -38,16 +38,17 @@ const Footer = () => {
         >
           {/* Brand block */}
           <motion.div className="footer-brand" variants={itemVariants}>
-            <img src="assets/home/logo.png" alt="HRG Construction Logo" className="footer-logo-img" />
+            <div className="footer-logo-text mb-4">
+              <span className="text-gold font-bold font-heading text-2xl tracking-wide">𝗦𝗵𝗿𝗲𝗲 𝗥𝗮𝗱𝗵𝗲</span>
+              <div className="text-[10px] text-gray-500 uppercase tracking-widest mt-0.5">Colour Work & Civil Contractor</div>
+            </div>
             <p className="brand-text">
-              Pioneering high-end commercial and residential real estate since 2015. Benchmarking excellence, one landmark at a time.
+              Premier civil and painting contractor in Ahmedabad since 2010. Benchmarking excellence, quality, and trust.
             </p>
             <div className="social-links">
-              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="#" aria-label="Facebook"><FaFacebook size={18} /></motion.a>
-              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="#" aria-label="Instagram"><FaInstagram size={18} /></motion.a>
-              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="#" aria-label="Twitter"><FaTwitter size={18} /></motion.a>
-              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="#" aria-label="LinkedIn"><FaLinkedin size={18} /></motion.a>
-              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="#" aria-label="YouTube"><FaYoutube size={18} /></motion.a>
+              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="https://www.facebook.com/colorandconstruction" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={20} /></motion.a>
+              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="https://wa.me/919426758207" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp size={20} /></motion.a>
+              <motion.a whileHover={{ scale: 1.1, y: -3 }} href="https://www.justdial.com/Ahmedabad/Shree-Radhe-Colour-World-Opposite-Green-Park-Narol/079PXX79-XX79-220318210821-U6C8_BZDET" target="_blank" rel="noopener noreferrer" aria-label="JustDial" title="JustDial Directory"><FaInfoCircle size={20} /></motion.a>
             </div>
           </motion.div>
 
@@ -60,29 +61,28 @@ const Footer = () => {
               <Link to="/projects" className="hover-underline">Our Projects</Link>
               <Link to="/services" className="hover-underline">Services</Link>
               <Link to="/contact" className="hover-underline">Contact</Link>
-              <Link to="/contact" className="hover-underline">Careers</Link>
             </div>
           </motion.div>
 
           {/* Featured projects block */}
           <motion.div className="footer-links" variants={itemVariants}>
-            <h3>Landmarks</h3>
+            <h3>Our Specialties</h3>
             <div className="links-grid">
-              <Link to="/projects/verantes" className="hover-underline flex items-center gap-1">VERÁNTES® <ExternalLink size={12} /></Link>
-              <Link to="/projects/mercado" className="hover-underline flex items-center gap-1">MERCÁDO® <ExternalLink size={12} /></Link>
-              <Link to="/projects/cross-roads" className="hover-underline flex items-center gap-1">Cross Roads <ExternalLink size={12} /></Link>
-              <Link to="/projects/jewel-park" className="hover-underline flex items-center gap-1">The Jewel Park® <ExternalLink size={12} /></Link>
+              <Link to="/projects/office-renovation" className="hover-underline flex items-center gap-1">Office Remodeling <ExternalLink size={12} /></Link>
+              <Link to="/projects/flat-furniture" className="hover-underline flex items-center gap-1">Flat Furniture & Woodwork <ExternalLink size={12} /></Link>
+              <Link to="/projects/wall-painting" className="hover-underline flex items-center gap-1">Putty & Painting <ExternalLink size={12} /></Link>
+              <Link to="/projects/bathroom-remodeling" className="hover-underline flex items-center gap-1">Bathroom Renovations <ExternalLink size={12} /></Link>
             </div>
           </motion.div>
 
           {/* Newsletter and Corporate indicators */}
           <motion.div className="footer-newsletter-col" variants={itemVariants}>
-            <h3>Stay Updated</h3>
-            <p className="newsletter-desc">Subscribe to receive exclusive updates on upcoming luxury developments.</p>
-            <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+            <h3>Request Consultation</h3>
+            <p className="newsletter-desc">Submit your email to request a callback for painting or civil estimations.</p>
+            <form className="newsletter-form" onSubmit={(e) => { e.preventDefault(); alert("Callback requested! We will reach out to you shortly."); }}>
               <div className="input-group">
                 <input type="email" placeholder="Email Address" required />
-                <button type="submit" aria-label="Subscribe">
+                <button type="submit" aria-label="Submit">
                   <ArrowRight size={18} />
                 </button>
               </div>
@@ -91,11 +91,11 @@ const Footer = () => {
             <div className="corporate-badges mt-6 flex items-center gap-3">
               <div className="badge-item flex items-center gap-1.5 text-xs text-gray-400">
                 <ShieldCheck size={14} className="text-gold" />
-                <span>RERA Registered</span>
+                <span>100% Trust Guarantee</span>
               </div>
               <div className="divider-dot"></div>
               <div className="badge-item text-xs text-gray-400">
-                <span>ESTD. 2015</span>
+                <span>ESTD. 2010</span>
               </div>
             </div>
           </motion.div>
@@ -107,24 +107,24 @@ const Footer = () => {
             <div className="contact-card-item">
               <MapPin size={20} className="text-gold flex-shrink-0" />
               <div>
-                <h4>Office</h4>
-                <p>UL3 Samedh Building, CG Road, Ahmedabad</p>
+                <h4>Office Location</h4>
+                <p>Naranpura, Ahmedabad, IN - 380013</p>
               </div>
             </div>
             
             <div className="contact-card-item">
               <Phone size={20} className="text-gold flex-shrink-0" />
               <div>
-                <h4>Inquiries</h4>
-                <p>Sales: +91 99787 93795</p>
+                <h4>Contact Satish bhai</h4>
+                <p>+91 94267 58207</p>
               </div>
             </div>
 
             <div className="contact-card-item">
               <Mail size={20} className="text-gold flex-shrink-0" />
               <div>
-                <h4>Email</h4>
-                <p>sales@hrgconstruction.com</p>
+                <h4>Email Support</h4>
+                <p>info@shreeradhecolourwork.com</p>
               </div>
             </div>
           </div>
@@ -133,11 +133,9 @@ const Footer = () => {
         {/* Footer bottom */}
         <div className="footer-bottom py-6 border-t border-[#161f30] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} HRG Construction Co. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Shree Radhe Colour Work & Construction Contractor. All Rights Reserved.
           </p>
           <div className="footer-legal text-xs text-gray-500 flex gap-4">
-            <a href="#" className="hover:text-gold transition">RERA Disclaimer</a>
-            <span>•</span>
             <a href="#" className="hover:text-gold transition">Privacy Policy</a>
             <span>•</span>
             <a href="#" className="hover:text-gold transition">Terms of Use</a>

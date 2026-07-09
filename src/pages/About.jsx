@@ -1,31 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Diamond, ShieldCheck, Zap, Heart, Target, Users } from 'lucide-react';
+import { ShieldCheck, Zap, Heart, Target, Users, Hammer } from 'lucide-react';
 import './About.css';
 
 const coreValues = [
-  { icon: <Diamond size={32} />, title: "Exclusivity", desc: "Homes are assets forever. We take a lot more than bricks and concrete, crafting spaces that exude exclusivity." },
-  { icon: <ShieldCheck size={32} />, title: "Simplicity", desc: "Simplicity has been the ultimate form of sophistication. A thought that acts as the centre of all." },
-  { icon: <Zap size={32} />, title: "Dynamism", desc: "Driven by dynamism, we take inspiration from global trends without forgetting our roots and ethos." },
-  { icon: <Heart size={32} />, title: "Honesty", desc: "Honesty is the richest legacy. We have an open door policy, admire transparency, and make no compromise with quality." },
-  { icon: <Target size={32} />, title: "Attention to Detail", desc: "Achieving thoroughness and accuracy. Besides finesse, we take good care of the foundation and functionality." },
-  { icon: <Users size={32} />, title: "People Centric", desc: "Whatever we do endeavours around you. Every aspect of your home is designed keeping you in mind." }
+  { icon: <ShieldCheck size={32} />, title: "Quality Commitment", desc: "We use only premium materials (Asian Paints, premium Birla putty, robust ply/cement) to ensure finishes that stand the test of time." },
+  { icon: <Hammer size={32} />, title: "Precision Craft", desc: "From plaster leveling to modular carpentry joints, we take immense pride in fine workmanship and structural durability." },
+  { icon: <Zap size={32} />, title: "Timely Delivery", desc: "No delays. We optimize labor coordination and site layout to ensure your remodeling or paint job is completed strictly on schedule." },
+  { icon: <Heart size={32} />, title: "Transparency", desc: "Honesty is our foundation. We provide detailed, itemized quotes with clear material specifications, ensuring zero hidden costs." },
+  { icon: <Target size={32} />, title: "Attention to Detail", desc: "Whether it is anti-skid grouting in bathrooms, pop false ceiling lines, or texture coat alignment, we care about the details." },
+  { icon: <Users size={32} />, title: "Client First", desc: "We tailor our civil construction and paint schedules around your comfort, keeping disturbance to your daily life to a minimum." }
 ];
 
 const milestones = [
-  { year: "2019", text: "Mr. Karan Bhatia on Panel Discussion at Realty Plus Conclave & Excellence Awards, Ahmedabad & Pune" },
-  { year: "2019", text: "RealtyPlus Awards 'Iconic Project of The Year'" },
-  { year: "2018", text: "RealtyPlus Awards 'Residential Project of The Year' & 'Themed Project of The Year'" },
-  { year: "2018", text: "Times Realty & Retail Icons 'Emerging Luxury Project of The Year'" },
-  { year: "2017", text: "Prop Realty Awards 'Luxury Project of The Year'" },
-  { year: "2016", text: "Bhumi Pujan at HRG Verántes® & Presentations at Realtors 2020" },
+  { year: "2026", text: "Successfully completed over 500+ residential and commercial contracting projects across Ahmedabad." },
+  { year: "2023", text: "Expanded team capabilities to handle large-scale commercial civil and custom carpentry works (e.g. Bopal, Thaltej)." },
+  { year: "2020", text: "Acclaimed as a top-rated civil and color contractor on JustDial and local directories in Gujarat." },
+  { year: "2015", text: "Pioneered integrated home remodeling services combining waterproofing, tiling, POP, and electrical works under one roof." },
+  { year: "2010", text: "Founded by Mr. Satish Rathod as a dedicated colour and painting service provider in Naranpura, Ahmedabad." }
 ];
 
 const team = [
-  { name: "Mr. Chandrasen Gajria", role: "Partner", img: "assets/about/view/image-28.jpg" },
-  { name: "Mr. Nirmal Bhatia", role: "Partner", img: "assets/about/view/image-29.jpg" },
-  { name: "Mr. Karan Bhatia", role: "Director, Sales & Marketing", img: "assets/about/view/image-26.jpg" },
-  { name: "Mr. Chirag Bhatia", role: "Director, Operations", img: "assets/about/view/image-27.jpg" }
+  { name: "Mr. Satish Rathod", role: "Founder & Proprietor", img: "assets/about/view/image-28.jpg" },
+  { name: "Mr. Rajesh Rathod", role: "Project Supervisor", img: "assets/about/view/image-29.jpg" },
+  { name: "Mr. Dinesh Rathod", role: "Carpentry Coordinator", img: "assets/about/view/image-26.jpg" },
+  { name: "Mr. Manoj Patel", role: "Master Painting Specialist", img: "assets/about/view/image-27.jpg" }
 ];
 
 const About = () => {
@@ -33,7 +32,7 @@ const About = () => {
     <div className="about-page">
       {/* Page Header */}
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('assets/cross-roads/view/banner-2.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('https://lh3.googleusercontent.com/4GZ66hLP31sDEePFKpEntf1ItWY0aFPieph9HnhkZtoD5PDEdp7Do9O6wPObKd1ZS11q5e-UBaTiIxXurA=s0')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div
@@ -42,9 +41,9 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-4">Discover Our Legacy</h5>
-            <h1 className="gradient-text font-heading">About HRG Construction</h1>
+            <h1 className="gradient-text font-heading">About Shree Radhe</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mt-4">
-              Pioneering excellence in real estate development since 2015, building a living heritage.
+              Building trust and delivering high-quality painting, civil renovations, and carpentry in Ahmedabad since 2010.
             </p>
           </motion.div>
         </div>
@@ -62,19 +61,15 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-2">Our Story</h5>
-              <h2 className="text-4xl font-heading mb-6">Started in 2015, with our first Residential Project</h2>
+              <h2 className="text-4xl font-heading mb-6">Over 15 Years of Crafting Beautiful Spaces in Gujarat</h2>
               <p className="text-lg text-gray-300 mb-4">
-                HRG Construction Co., a pioneering real-estate development company based in Ahmedabad (Gujarat), 
-                has been benchmarking the industry since its inception. 
+                Shree Radhe Colour Work & Construction Contractor was established with a singular vision: to offer honest, reliable, and premium civil construction and colour contracting services.
               </p>
               <p className="text-gray-400 mb-6">
-                We strive to bring to you exclusive high end properties that have been carefully crafted to your perfection. 
-                We believe that perfection is only a milestone and we choose to go beyond that. At HRG, we don’t just build 
-                buildings but craft a space that has been tailored to your needs. These spaces are inspired from design trends 
-                across the globe yet stay rooted to our values.
+                Under the leadership of Mr. Satish Rathod (Satish bhai), we have grown from a local painting service into a comprehensive civil contracting firm. Our team handles every aspect of interior construction, waterproofing, structural repairs, POP design, and carpentry. We do not compromise on structural integrity or aesthetic refinement. Whether it's a minor bathroom repair or a full-scale office remodeling, we guarantee absolute customer satisfaction.
               </p>
               <p className="text-gray-400 font-bold border-l-2 border-[#d4af37] pl-4 italic">
-                "HRG Group believes in creating noteworthy additions to the urban landscape through creative collaborations with passionate people."
+                "Shree Radhe believes in executing projects with superior materials, transparent timelines, and neat workmanship to ensure lifelong quality for our clients."
               </p>
             </motion.div>
             <motion.div 
@@ -84,7 +79,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-               <div className="about-image" style={{backgroundImage: "url('assets/about/view/image-30.png')"}}></div>
+               <div className="about-image" style={{backgroundImage: "url('https://lh3.googleusercontent.com/qzFAY6umb5a92LpFSdFmCeqp3VxqsBLjlc0MX1txZ1xAMMvAH24kgTiy7odWbY7n8Eyh3MYpuD6_ic6wDQ=s0')"}}></div>
             </motion.div>
           </div>
         </div>
@@ -132,7 +127,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-2">Our Journey</h5>
-            <h2 className="text-4xl font-heading">Milestones & Awards</h2>
+            <h2 className="text-4xl font-heading">Milestones & History</h2>
           </motion.div>
 
           <div className="timeline">
@@ -166,7 +161,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-2">The Leadership</h5>
-            <h2 className="text-4xl font-heading">Our Team</h2>
+            <h2 className="text-4xl font-heading">Our Key Team</h2>
           </motion.div>
 
           <div className="team-grid">

@@ -40,8 +40,9 @@ const Header = () => {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
-        <Link to="/" className="logo">
-          <img src="assets/home/logo.png" alt="HRG Construction Logo" className="logo-img" />
+        <Link to="/" className="logo flex flex-col justify-center" style={{ textDecoration: 'none' }}>
+          <span className="text-gold font-bold font-heading text-xl tracking-wide">𝗦𝗵𝗿𝗲𝗲 𝗥𝗮𝗱𝗵𝗲</span>
+          <span className="text-[8px] text-gray-500 uppercase tracking-widest mt-[-2px]">Colour Work & Civil Contractor</span>
         </Link>
         
         {/* Desktop Nav */}
@@ -51,9 +52,9 @@ const Header = () => {
               <span className="nav-item-text">{link.name}</span>
             </Link>
           ))}
-          <Link to="/contact" className="btn-primary ml-4">Book Visit</Link>
+          <Link to="/contact" className="btn-primary ml-4" style={{ padding: '0.6rem 1.5rem', fontSize: '0.8rem' }}>Get Quote</Link>
         </nav>
-
+        
         <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ zIndex: 2000 }}>
           {isMobileMenuOpen ? <X size={32} className="text-gold" /> : <Menu size={32} />}
         </button>
@@ -87,7 +88,7 @@ const Header = () => {
                   className="btn-primary mt-8 inline-block" 
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Book Visit
+                  Get Quote
                 </Link>
               </motion.div>
             </div>

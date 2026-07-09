@@ -52,7 +52,7 @@ const ProjectDetail = () => {
               </div>
               <div className="meta-item glass-panel">
                 <MapPin size={18} />
-                <span>RERA: {project.rera}</span>
+                <span>Ahmedabad, Gujarat</span>
               </div>
             </div>
           </motion.div>
@@ -85,19 +85,16 @@ const ProjectDetail = () => {
             
             <div className="project-inquiry-col">
               <div className="glass-panel inquiry-form-card">
-                <h3 className="inquiry-title text-2xl font-heading text-gold mb-2">Quick Inquiry</h3>
-                <p className="inquiry-subtitle text-sm text-gray-400 mb-6">Connect with our luxury sales consultants directly.</p>
-                <form className="inquiry-form flex flex-col gap-4">
+                <h3 className="inquiry-title text-2xl font-heading text-gold mb-2">Request Estimate</h3>
+                <p className="inquiry-subtitle text-sm text-gray-400 mb-6">Connect with Satish bhai for pricing inquiries.</p>
+                <form className="inquiry-form flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); alert("Estimate request received! We will call you shortly."); }}>
                   <div className="form-input-group">
                     <input type="text" placeholder="Your Name" required />
                   </div>
                   <div className="form-input-group">
-                    <input type="email" placeholder="Your Email Address" required />
+                    <input type="tel" placeholder="WhatsApp / Phone Number" required />
                   </div>
-                  <div className="form-input-group">
-                    <input type="tel" placeholder="Phone Number" required />
-                  </div>
-                  <button type="button" className="btn-primary inquiry-btn w-full mt-2 py-4">
+                  <button type="submit" className="btn-primary inquiry-btn w-full mt-2 py-4">
                     <span>Request Callback</span>
                   </button>
                 </form>
@@ -107,72 +104,78 @@ const ProjectDetail = () => {
         </section>
 
         {/* Specifications */}
-        <section className="project-section" id="specifications">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="section-title"><LayoutDashboard className="text-gold" /> Specifications</h2>
-            <div className="specs-grid">
-              {project.specifications.map((spec, i) => (
-                <div key={i} className="spec-card rounded-2xl">
-                  <h4 className="font-heading">{spec.title}</h4>
-                  <p className="text-gray-400">{spec.desc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </section>
+        {project.specifications && project.specifications.length > 0 && (
+          <section className="project-section" id="specifications">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="section-title"><LayoutDashboard className="text-gold" /> Specifications</h2>
+              <div className="specs-grid">
+                {project.specifications.map((spec, i) => (
+                  <div key={i} className="spec-card rounded-2xl">
+                    <h4 className="font-heading">{spec.title}</h4>
+                    <p className="text-gray-400">{spec.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </section>
+        )}
 
         {/* Sample Views / Gallery */}
-        <section className="project-section" id="views">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="section-title"><ImageIcon className="text-gold" /> Sample Views</h2>
-            <div className="gallery-grid">
-              {project.sampleViews.map((img, i) => (
-                <div key={i} className="gallery-item shadow-2xl">
-                  <img src={img} alt={`${project.title} view ${i + 1}`} />
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </section>
+        {project.sampleViews && project.sampleViews.length > 0 && (
+          <section className="project-section" id="views">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="section-title"><ImageIcon className="text-gold" /> Gallery & Views</h2>
+              <div className="gallery-grid">
+                {project.sampleViews.map((img, i) => (
+                  <div key={i} className="gallery-item shadow-2xl">
+                    <img src={img} alt={`${project.title} view ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </section>
+        )}
 
         {/* Layout Plans */}
-        <section className="project-section mb-24" id="layouts">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="section-title"><LayoutDashboard className="text-gold" /> Layout Plans</h2>
-            <div className="layouts-grid">
-              {project.layoutPlans.map((img, i) => (
-                <div key={i} className="layout-item shadow-2xl">
-                  <div className="blueprint-header flex justify-between items-center mb-4 pb-4 border-b border-[#2a364d]">
-                    <div className="blueprint-title flex flex-col">
-                      <span className="text-gold font-mono text-xs uppercase tracking-widest">Architectural Scheme</span>
-                      <span className="text-white font-heading text-lg font-bold">Floor Plan {i + 1}</span>
+        {project.layoutPlans && project.layoutPlans.length > 0 && (
+          <section className="project-section mb-24" id="layouts">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="section-title"><LayoutDashboard className="text-gold" /> Layout Plans</h2>
+              <div className="layouts-grid">
+                {project.layoutPlans.map((img, i) => (
+                  <div key={i} className="layout-item shadow-2xl">
+                    <div className="blueprint-header flex justify-between items-center mb-4 pb-4 border-b border-[#2a364d]">
+                      <div className="blueprint-title flex flex-col">
+                        <span className="text-gold font-mono text-xs uppercase tracking-widest">Architectural Scheme</span>
+                        <span className="text-white font-heading text-lg font-bold">Floor Plan {i + 1}</span>
+                      </div>
+                      <div className="blueprint-meta text-right font-mono text-xs text-gray-500">
+                        <span>SCALE: 1:100</span>
+                        <span className="mx-2">•</span>
+                        <span>PLAN NO: 0{i + 1}</span>
+                      </div>
                     </div>
-                    <div className="blueprint-meta text-right font-mono text-xs text-gray-500">
-                      <span>SCALE: 1:100</span>
-                      <span className="mx-2">•</span>
-                      <span>PLAN NO: 0{i + 1}</span>
+                    <div className="blueprint-image-wrapper">
+                      <img src={img} alt={`${project.title} layout ${i + 1}`} className="blueprint-img" />
                     </div>
                   </div>
-                  <div className="blueprint-image-wrapper">
-                    <img src={img} alt={`${project.title} layout ${i + 1}`} className="blueprint-img" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </section>
+                ))}
+              </div>
+            </motion.div>
+          </section>
+        )}
       </div>
     </div>
   );

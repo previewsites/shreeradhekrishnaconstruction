@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <section className="page-header">
-        <div className="page-header-bg" style={{backgroundImage: "url('assets/extracted_index_152.jpg')"}}></div>
+        <div className="page-header-bg" style={{backgroundImage: "url('https://lh3.googleusercontent.com/4GZ66hLP31sDEePFKpEntf1ItWY0aFPieph9HnhkZtoD5PDEdp7Do9O6wPObKd1ZS11q5e-UBaTiIxXurA=s0')"}}></div>
         <div className="page-header-overlay"></div>
         <div className="container page-header-content">
           <motion.div
@@ -20,10 +20,10 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-4">Our Masterpieces</h5>
-            <h1 className="gradient-text font-heading">Our Portfolio</h1>
+            <h5 className="text-gold uppercase tracking-widest text-sm font-bold mb-4">Our Showcase</h5>
+            <h1 className="gradient-text font-heading">Our Projects</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mt-4">
-              Discover our exclusive commercial and residential developments that are reshaping Ahmedabad's skyline.
+              Explore our verified painting, civil renovation, and carpentry contractor works completed across Ahmedabad.
             </p>
           </motion.div>
         </div>
@@ -62,15 +62,15 @@ const Projects = () => {
                     <div className="features-grid mb-8">
                       {project.features.map((feature, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
-                          <CheckCircle2 size={16} className="text-gold" />
-                          <span>{feature}</span>
+                           <CheckCircle2 size={16} className="text-gold" />
+                           <span>{feature}</span>
                         </div>
                       ))}
                     </div>
 
                     <div className="rera-box mb-8">
-                      <span className="text-xs uppercase tracking-wider text-gray-500 block mb-1">RERA Registration</span>
-                      <strong className="text-sm font-mono text-gray-300 tracking-tight">{project.rera}</strong>
+                      <span className="text-xs uppercase tracking-wider text-gray-500 block mb-1">Contract Category</span>
+                      <strong className="text-sm text-gray-300 tracking-tight">{project.type}</strong>
                     </div>
                     
                     <Link to={`/projects/${project.id}`} className="btn-secondary w-full sm:w-auto inline-flex justify-center items-center">
